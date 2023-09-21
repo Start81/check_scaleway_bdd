@@ -16,7 +16,7 @@ sudo cpan REST::Client Data::Dumper  Monitoring::Plugin JSON Readonly
 ### Utilisation
 
 ```bash
-check_scaleway_bdd2.pl 1.1.2
+check_scaleway_bdd.pl 1.1.2
 
 This nagios plugin is free software, and comes with ABSOLUTELY NO WARRANTY.
 It may be used, redistributed and/or modified under the terms of the GNU
