@@ -68,9 +68,9 @@ sample  :
 ```bash
 #list all database 
 ./check_scaleway_bdd.pl -T <Token> -r fr-par -L
-#Check a db  
+#BDD state
 ./check_scaleway_bdd.pl -T <Token> -r fr-par -N MyDatabaseName
-#Recuperation d'une metrique
+#get a metric
 ./check_scaleway_bdd.pl -T <Token> -r fr-par -N MyDatabaseName -m disk_usage_percent
 ./check_scaleway_bdd.pl -T <Token> -r fr-par -i MyDBUID -r fr-par -m disk_usage_percent
 #check backup 
@@ -79,13 +79,13 @@ sample  :
 you may get  :
 
 ```bash
-#Lister les instances
+#list all database
 <?xml version="1.0" encoding="utf-8"?><data>
 <label name="MyDatabaseName"id="MyDBUID"/>
 <label name="MyDatabaseName"id="MyDBUID"/>
 <label name="MyDatabaseName"id="MyDBUID"/>
 </data>
-#BDD sate 
+#BDD state 
 check_scaleway_bdd.pl OK - instance status ready engine MySQL-8 name MyDatabaseName id = MyDBUID
 #get a metric
 check_scaleway_bdd.pl OK - disk_usage_percent value 8.748 | disk_usage_percent_MyDBUID=8.748%;;
