@@ -63,7 +63,7 @@ Usage: check_scaleway_bdd2.pl  -T <Token> -r <Scaleway region>  -N <BDD name> | 
    Show details for command-line debugging (can repeat up to 3 times)
 ```
 
-use case :
+sample  :
 
 ```bash
 #list all database 
@@ -76,7 +76,7 @@ use case :
 #check backup 
 ./check_scaleway_bdd.pl -T <Token> -r fr-par -i MyDBUID -r fr-par --backup --dbname=xxx 
 ```
-Retour des commandes :
+you may get  :
 
 ```bash
 #Lister les instances
@@ -85,9 +85,9 @@ Retour des commandes :
 <label name="MyDatabaseName"id="MyDBUID"/>
 <label name="MyDatabaseName"id="MyDBUID"/>
 </data>
-#Etat d'une instance 
+#BDD sate 
 check_scaleway_bdd.pl OK - instance status ready engine MySQL-8 name MyDatabaseName id = MyDBUID
-#Recuperation d'une metrique
+#get a metric
 check_scaleway_bdd.pl OK - disk_usage_percent value 8.748 | disk_usage_percent_MyDBUID=8.748%;;
 #check backup 
 OK - backup instance_id = MyDBUID database_name xxx is 3.486h old
