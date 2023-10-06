@@ -13,7 +13,7 @@ to install them type :
 sudo cpan REST::Client Data::Dumper  Monitoring::Plugin JSON Readonly 
 ```
 
-### Utilisation
+### Use case
 
 ```bash
 check_scaleway_bdd.pl 1.1.2
