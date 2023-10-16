@@ -1,6 +1,6 @@
 ## check_scaleway_bdd
 
-This is a Nagios check that use Scalways's REST API  to check if the bdd is up and get metric
+This is a Nagios check that use Scalway's REST API  to check if the bdd is up and get metric
 https://www.scaleway.com/en/developers/api/managed-database-postgre-mysql/
 
 ### prerequisites
