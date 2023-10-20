@@ -86,9 +86,9 @@ you may get  :
 <label name="MyDatabaseName"id="MyDBUID"/>
 </data>
 #BDD state 
-check_scaleway_bdd.pl OK - instance status ready engine MySQL-8 name MyDatabaseName id = MyDBUID
+ OK - instance status ready engine MySQL-8 name MyDatabaseName id = MyDBUID
 #get a metric
-check_scaleway_bdd.pl OK - disk_usage_percent value 8.748 | disk_usage_percent_MyDBUID=8.748%;;
+ OK - disk_usage_percent value 8.748 | disk_usage_percent_MyDBUID=8.748%;;
 #check backup 
 OK - backup instance_id = MyDBUID database_name xxx is 3.486h old
 ```
