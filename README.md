@@ -90,6 +90,6 @@ you may get  :
 #get a metric
  OK - disk_usage_percent value 8.748 | disk_usage_percent_MyDBUID=8.748%;;
 #check backup 
-OK - backup instance_id = MyDBUID database_name xxx is 3.486h old
+ OK - backup instance_id = MyDBUID database_name xxx is 3.486h old
 ```
 
