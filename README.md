@@ -1,6 +1,6 @@
 ## check_scaleway_bdd
 
-This is a Nagios check that use Scalway's REST API  to check if the bdd is up and get metric
+This is a Nagios check that use Scaleway's REST API  to check if the bdd is up and get metric
 https://www.scaleway.com/en/developers/api/managed-database-postgre-mysql/
 
 ### prerequisites
@@ -22,9 +22,9 @@ This nagios plugin is free software, and comes with ABSOLUTELY NO WARRANTY.
 It may be used, redistributed and/or modified under the terms of the GNU
 General Public Licence (see http://www.fsf.org/licensing/licenses/gpl.txt).
 
-check_scaleway_bdd2.pl is a Nagios check that use Scaleway s REST API to get bdd metrics and status
+check_scaleway_bdd.pl is a Nagios check that use Scaleway s REST API to get bdd metrics and status
 
-Usage: check_scaleway_bdd2.pl  -T <Token> -r <Scaleway region>  -N <BDD name> | -i <id> [-m <Metric_Name>] | -L  | -b -d <dbname> ] [-w <threshold> -c <threshold> ]
+Usage: check_scaleway_bdd.pl  -T <Token> -r <Scaleway region>  -N <BDD name> | -i <id> [-m <Metric_Name>] | -L  | -b -d <dbname> ] [-w <threshold> -c <threshold> ]
 
  -?, --usage
    Print usage information
