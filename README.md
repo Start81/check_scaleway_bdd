@@ -5,12 +5,12 @@ https://www.scaleway.com/en/developers/api/managed-database-postgre-mysql/
 
 ### prerequisites
 
-This script uses theses libs : REST::Client, Data::Dumper, Monitoring::Plugin, JSON, Readonly
+This script uses theses libs : Monitoring::Plugin, Data::Dumper, JSON, REST::Client, Readonly, File::Basename, DateTime
 
 to install them type :
 
 ```
-sudo cpan REST::Client Data::Dumper  Monitoring::Plugin JSON Readonly 
+sudo cpan Monitoring::Plugin Data::Dumper JSON REST::Client Readonly File::Basename DateTime
 ```
 
 ### Use case
