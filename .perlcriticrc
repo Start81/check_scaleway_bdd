@@ -1,4 +1,4 @@
-severity = 4
+severity = 2
 
 [InputOutput::RequireCheckedSyscalls]
 functions = :builtins
