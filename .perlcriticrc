@@ -1,6 +1,7 @@
 severity = 3
 [-Subroutines::ProhibitExcessComplexity]
 [-ControlStructures::ProhibitDeepNests]
+[-Modules::ProhibitExcessMainComplexity]
 [InputOutput::RequireCheckedSyscalls]
 functions = :builtins
 exclude_functions = print
