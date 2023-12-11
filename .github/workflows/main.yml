@@ -1,0 +1,4 @@
+- name: GitHub Action for Perl Critic
+  uses: Difegue/action-perlcritic@2.1.0
+         with:
+          args: --harsh      
