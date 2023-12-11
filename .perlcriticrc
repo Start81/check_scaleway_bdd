@@ -1,8 +1,6 @@
 severity = 3
 [Subroutines::ProhibitExcessComplexity]
-max_mccabe = 60
 [ControlStructures::ProhibitDeepNests]
-max_nests = 8
 [InputOutput::RequireCheckedSyscalls]
 functions = :builtins
 exclude_functions = print
