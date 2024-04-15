@@ -367,12 +367,12 @@ if ($o_backup){
             @tmp = split(' ',$key);
             $msg = "$msg $key  $o_metric =  $metrics_bdd{$key}$metrics{$o_metric}";
             $np->add_perfdata(label => "$o_metric"."_". $tmp[1], value => $metrics_bdd{$key}, uom => $metrics{$o_metric}, warning => $o_warning, critical => $o_critical);
-                if ((defined($np->opts->warning) || defined($np->opts->critical))) {
-                    $np->set_thresholds(warning => $o_warning, critical => $o_critical);
-                    my $test_metric = $np->check_threshold($metrics_bdd{$key});
-                    push( @criticals, " $o_metric $key out of range value $metrics_bdd{$key}" . $metrics{$o_metric} ) if ($test_metric==2);
-                    push( @warnings, " $o_metric $key out of range value $metrics_bdd{$key}" . $metrics{$o_metric}) if ($test_metric==1);
-                } 
+            if ((defined($np->opts->warning) || defined($np->opts->critical))) {
+                $np->set_thresholds(warning => $o_warning, critical => $o_critical);
+                my $test_metric = $np->check_threshold($metrics_bdd{$key});
+                push( @criticals, " $o_metric $key out of range value $metrics_bdd{$key}" . $metrics{$o_metric} ) if ($test_metric==2);
+                push( @warnings, " $o_metric $key out of range value $metrics_bdd{$key}" . $metrics{$o_metric}) if ($test_metric==1);
+            } 
         }
         
     }
