@@ -2,8 +2,8 @@
 #=============================================================================== 
 # Script Name   : check_scaleway_bdd.pl
 # Usage Syntax  : check_scaleway_bdd.pl -T <Token> -r <Scaleway region>  -N <BDD name> | -i <id> [-m <Metric_Name>] | -L | -b -d <dbname> ] [-w <threshold> -c <threshold> ]
-# Version       : 1.1.2
-# Last Modified : 21/09/2023
+# Version       : 1.1.3
+# Last Modified : 30/08/2024
 # Modified By   : Start81
 # Description   : This is a Nagios check that uses Scaleway s REST API to get bdd metrics and status
 # Depends On    :  Monitoring::Plugin Data::Dumper JSON REST::Client Readonly File::Basename DateTime 
@@ -17,6 +17,7 @@
 #  - 28/06/2023| 1.1.0 | [+] Add backup check and add cluster support 
 #  - 30/06/2023| 1.1.1 | [!] bug fix => no unit in perfdata for total_connections
 #  - 21/09/2023| 1.1.2 | [*] clean-up code
+#  - 30/08/2024| 1.1.3 | [*] clean-up code
 #===============================================================================
 
 use strict;
@@ -309,13 +310,12 @@ if ($o_backup){
     $max_connexions = 0;
     $msg ="instance status $status engine $engine name $name id = $id";
     $max_connexions = $instance_json->{'settings'}->[0]->{'value'} if ($instance_json->{'settings'}->[0]->{'name'} eq "max_connections");
-    #If state in not defined in %state then return critical
+    #If state in not defined in %state then return unknown
     if (!exists $state{$status} ){
         push( @criticals," State $status is UNKNOWN "); 
     } else {
-        push( @criticals,$msg) if ($state{$status}== 2);
-    }
-    push( @criticals,$msg) if ($state{$status}== 2);
+        push( @criticals,$msg) if ($state{$status} == 2);
+    } 
     if ($o_metric) {
         #Metric
         my $rep_metric;
